@@ -1,6 +1,10 @@
 Polymer({
   is: 'example-app',
   properties: {
+    apiRoot: {
+        type: String,
+        value: window.API_ROOT
+    },
     route: Object,
     jsonldData: {
         type: String,

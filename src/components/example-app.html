@@ -37,7 +37,7 @@ paper-card {
 </style>
     <iron-ajax
       auto
-      url="https://localhost/api//json-ld?route=/campagnes/delano"
+      url="[[apiRoot]]/json-ld?route=/campagnes/delano"
       handle-as="text"
       last-response="{{jsonldData}}"
     ></iron-ajax>

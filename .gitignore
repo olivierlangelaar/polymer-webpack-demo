@@ -3,3 +3,4 @@ node_modules/
 dist/
 src/bower_components/
 npm-debug.log
+config.js
