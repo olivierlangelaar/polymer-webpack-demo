@@ -17,6 +17,8 @@
   "dependencies": {
     "app-route": "PolymerElements/app-route#^0.9.3",
     "iron-pages": "PolymerElements/iron-pages#^1.0.8",
-    "paper-elements": "PolymerElements/paper-elements#^1.0.7"
+    "iron-ajax": "PolymerElements/iron-ajax#~1.1.1",
+    "paper-elements": "PolymerElements/paper-elements#^1.0.7",
+    "app-metadata": "CaptainCodeman/app-metadata#^0.0.6"
   }
 }

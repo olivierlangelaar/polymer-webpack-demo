@@ -2,6 +2,7 @@
 <link rel="import" href="../bower_components/app-route/app-location.html">
 
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
 
 <link rel="import" href="../bower_components/paper-card/paper-card.html">
 <link rel="import" href="../bower_components/paper-button/paper-button.html">
@@ -9,6 +10,7 @@
 <link rel="import" href="../bower_components/paper-header-panel/paper-header-panel.html">
 <link rel="import" href="../bower_components/paper-styles/paper-styles.html">
 <link rel="import" href="../bower_components/paper-toolbar/paper-toolbar.html">
+<link rel="import" href="../bower_components/app-metadata/app-metadata.html">
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
 <!-- html import works with hot code reload -->
@@ -33,6 +35,13 @@ paper-card {
 }
 
 </style>
+    <iron-ajax
+      auto
+      url="https://localhost/api//json-ld?route=/campagnes/delano"
+      handle-as="text"
+      last-response="{{jsonldData}}"
+    ></iron-ajax>
+
     <!--================== <Router> ================-->
 
     <app-location route="{{route}}"></app-location>
@@ -52,8 +61,7 @@ paper-card {
 
           <paper-card heading="ROUTE:1" id="region1" name="">
             <div class="card-content">
-              <div> You are in Home page </div>
-              <div>MWC - meteor web components.</div>
+              <pre>[[jsonldData]]</pre>
             </div>
             <div class="card-actions">
               <paper-button on-click="second">Next</paper-button>
